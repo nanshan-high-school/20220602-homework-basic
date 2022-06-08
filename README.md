@@ -1,4 +1,7 @@
-#
+# 20220602 本週作業
+
+- [ZJ e155](https://zerojudge.tw/ShowProblem?problemid=e155)（e155.cpp）
+- 其他 [這裡提到的](https://emanlaicepsa.github.io/2020/12/03/0-19/) 練習
 
 ---
 
