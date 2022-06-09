@@ -1,0 +1,41 @@
+#include <iostream>
+#include <queue>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    while (cin >> n) {
+        if (n == 0) {
+            break;
+        }
+        
+        queue<int> cards;
+        vector<int> discarded;
+        
+        for (int i = 1; i <= n; i++) {
+            cards.push(i);
+        }
+
+        while (cards.size() >= 2) {
+            discarded.push_back(cards.front());
+            cards.pop();
+            
+            int temp = cards.front();
+
+            cards.pop();
+            cards.push(temp);
+        }
+
+        cout << "Discarded cards: ";
+        for (int i = 0; i < discarded.size(); i++) {
+            cout << discarded[i];
+
+            if (i != discarded.size() - 1) {
+                cout << ", ";
+            }
+        }
+
+        cout << "\n" << "Remaining card: " << cards.front() << "\n";
+    }
+}
